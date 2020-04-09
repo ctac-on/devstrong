@@ -1,0 +1,24 @@
+.o-wrapper {
+    position: relative;
+	margin: 0 auto;
+	width: 100%;
+    &_black {
+        background: #1d1e1e;
+    }
+    &_gray {
+        background: #efefef;
+    }
+    &_2 {
+        background: white;
+        border-top: 1px;
+        border-bottom: 1px;
+        border-style: solid;
+        border-color: #E2E2E2;
+    }
+    &_mob {
+        display: none;
+        @include media-breakpoint-down(md) {
+            display: block;
+        }
+    }
+}

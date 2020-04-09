@@ -1,0 +1,77 @@
+.spec {
+    
+    &__bigItem {
+        padding: 64px 40px 80px;
+        display: block;
+        position: relative;
+        text-decoration: none;
+        
+        &-title {
+            color: white;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        &-text {
+            @include text(600, 26px, 22px, #4bd1fe);
+            margin-bottom: 9px;
+        }
+        &-price {
+            @include text(normal, 34px, 30px, white);
+            margin-bottom: 28px;
+        }
+        &-button {
+            display: inline-block;
+            width: 100%;
+            max-width: 174px;
+            height: 54px;
+        }
+        &-img {
+            height: 100%;
+            width: auto;
+            
+            &Wrapper {
+                position: absolute;
+                top: -15px;
+                bottom: 0;
+                right: 8%;
+            }
+        }
+        &-pag {
+            position: absolute;
+            bottom: 35px;
+            left: 40px;
+        }
+    }
+    &__item {
+        margin-top: 30px;
+        display: block;
+        position: relative;
+        padding: 23px 25px 65px;
+        min-height: 178px;
+        
+        &-title {
+            color: white;
+            text-transform: uppercase;
+        }
+        &-text {
+            @include text(600, $font-size-small + 2px, $font-size-small, #4cd2fe);
+        }
+        &-img {
+            height: 100%;
+            width: auto;
+            
+            &Wrapper {
+                position: absolute;
+                top: -15px;
+                bottom: -15px;
+                right: -15px;
+            }
+        }
+        &-pag {
+            position: absolute;
+            bottom: 21px;
+            left: 25px;
+        }
+    }
+}
+

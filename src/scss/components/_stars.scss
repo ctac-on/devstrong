@@ -1,0 +1,21 @@
+.stars {
+    display: inline-block;
+    
+    &__item {
+        height: 15px;
+        width: 15px;
+        display: inline-block;
+        margin: 0 1.5px;
+        background: url('../img/star.png') center no-repeat;
+        &:first-of-type {
+            margin-left: 0;
+        }
+        &:last-of-type {
+            margin-right: 0;
+        }
+        
+        &_empty {
+            background: url('../img/star2.png') center no-repeat;
+        }
+    }
+}

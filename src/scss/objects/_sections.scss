@@ -1,0 +1,21 @@
+.o-section {
+    
+    &__spec {
+        padding-top: 30px;
+        padding-bottom: 95px;
+    }
+    &__catalog {
+        padding-top: 42px;
+        padding-bottom: 100px;
+        border-top: 1px solid #efefef;
+        position: relative;
+        &_news {
+            padding-bottom: 0px;
+        }
+    }
+    &__sub {
+        margin-top: -231px;
+        padding-top: 280px;
+        padding-bottom: 40px;
+    }
+}

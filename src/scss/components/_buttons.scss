@@ -1,0 +1,66 @@
+.button {
+    cursor: pointer;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    border: 0;
+    border-radius: map-get($global-border-radius, md);
+    background: linear-gradient(270deg, rgb(1,135,193) 0%, rgb(58,192,239) 100%);
+    display: inline-block;
+    &:hover {
+        background: #009ee2;
+    }
+    &_spec {
+        background: $font-global-color;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &:hover {
+            background: lighten($font-global-color, 20%);
+        }
+    }
+    
+    &__catalog {
+        @include text(600, 18px, 18px, white);
+        vertical-align: middle;
+    }
+    &__add {
+        @include text(bold, $font-size-normal + 4px, $font-size-normal, white);
+        letter-spacing: 2px;
+        text-transform: uppercase;
+    }
+    &__spec {
+        @include text(bold, 18px, 16px, white);
+        text-transform: uppercase;
+    }
+    &__burger {
+        width: 25px;
+        height: 2px;
+        display: inline-block;
+        background: white;
+        vertical-align: middle;
+        margin-right: 15px;
+        position: relative;
+        &:after, &:before {
+            content: "";
+            position: absolute;
+            width: inherit;
+            left: 0;
+            right: 0;
+            height: inherit;
+            background: inherit;
+        }
+        &:after {bottom: -8px;}
+        &:before {top: -8px;}
+    }
+    &__arr {
+        margin-left: 11px;
+        display: inline-block;
+        background: url("../img/arrow1.png") center no-repeat;
+        width: 14px;
+        height: 8px;
+        vertical-align: middle;
+    }
+}
+
+

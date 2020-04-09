@@ -1,0 +1,115 @@
+.catalog {
+    
+    &__title {
+        display: inline-block;
+        text-transform: uppercase;
+    }
+    &__link {
+        text-decoration: underline;
+        @include text(bold, 13px, 11px, #009ee2);
+        text-transform: uppercase;
+        margin-left: 30px;
+        &:hover {
+            text-decoration: none;
+        }
+    }
+    &__item {
+        display: flex;
+        min-height: 450px;
+        height: 100%;
+        padding: 25px 19px 15px;
+        position: relative;
+        flex-direction: column;
+        justify-content: space-between;
+        &_blue {
+            padding: 25px 30px 20px;
+        }
+        
+        &-title {
+            color: white;
+        }
+        &-img {
+            max-height: 100%;
+            max-width: 100%;
+            
+            &Wrapper {
+                height: 220px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-bottom: 10px;
+                vertical-align: middle;
+                &_blue {
+                    position: absolute;
+                    bottom: 50px;
+                    right: 10px;
+                }
+            }
+        }
+        &-like {
+            float: right;
+        }
+        &-text {
+            @include text(600, 20px);
+            margin-top: 10px;
+            margin-bottom: 15px;
+            &_blue {
+                @include text(600, 30px, 22px, #4cd2fe);
+                margin-top: 0;
+            }
+        }
+        &-price {
+            @include text(800, 22px, 18px);
+            &_blue {
+                @include text(normal, 34px, 30px, white);
+            }
+        }
+        &-del {
+            @include text(600, 16px, 14px, #6d6d6d);
+            margin-left: 15px;
+        }
+        &-plus {
+            margin-top: 5px;
+            @include text(600, 14px, 12px, #00963f);
+            margin-bottom: 6px;
+        }
+        &-button {
+            width: 100%;
+            height: 55px;
+        }
+        &-hit {
+            padding: 13px 15px;
+            @include text(800, 12px, 12px, white);
+            text-transform: uppercase;
+            border-radius: map-get($global-border-radius, md);
+            position: absolute;
+            left: 0;
+            top: 40px;
+            background: linear-gradient(270deg, rgb(1,135,193) 0%, rgb(58,192,239) 100%);
+        }
+        &-sale {
+            padding: 13px 15px;
+            @include text(800, 12px, 12px, white);
+            text-transform: uppercase;
+            border-radius: map-get($global-border-radius, md);
+            position: absolute;
+            left: 0;
+            top: 0;
+            background: #00963f;
+        }
+        &-bigsale {
+            position: absolute;
+            left: 0;
+            right: 0;
+            text-align: center;
+            @include text(800, 95px, 95px, rgba(255,255,255, 0.5));
+            bottom: 145px;
+        }
+    }
+    &__pag {
+        position: absolute;
+        top:50px;
+        right: 15px;
+    }
+}
+

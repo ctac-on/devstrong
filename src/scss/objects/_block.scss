@@ -1,0 +1,46 @@
+.o-block {
+    border-radius: map-get($global-border-radius, md);
+    display: block;
+    width: 100%;
+    position: relative;
+    background: white;
+    z-index: 10;
+    &_shd1 {
+        width: 80%;
+        height: 20px;
+        display: block;
+        margin: 0 auto;
+        position: absolute;
+        bottom: 0px;
+        left: 0;
+        right: 0;
+        box-shadow: 0 8px 15px #b7b7b7;
+        border-radius: 20px;
+    }
+    &_shd2 {
+        height: 25px;
+        display: block;
+        margin: 0 auto;
+        position: absolute;
+        bottom: 0px;
+        left: 15px;
+        right:15px;
+        box-shadow: 0 13px 20px #DBDBDB;
+        border-radius: 20px;
+         z-index: 5;
+    }
+    &:hover + &_shd2 {
+        box-shadow: 0 13px 20px #b7b7b7;
+        z-index: 5;
+    }
+    &_hidden {
+        overflow: hidden;        
+    }
+    &_blue {
+        background: url('../img/blue.jpg') center no-repeat;
+        background-size: cover;
+    }
+    &_brd {
+        border: 1px solid #efefef;
+    }
+}

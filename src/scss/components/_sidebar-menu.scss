@@ -1,0 +1,45 @@
+.sidebar-menu {
+    display: block;
+    
+    &__li {
+        display: block;
+        border-bottom: 1px;
+        border-style: solid;
+        border-color: white;
+        position: relative;
+        &:last-of-type {border: 0;}
+        &:before {
+            content: "";
+            width: 12px;
+            height: 12px;
+            top: 0;
+            bottom: 0;
+            position: absolute;
+            border: 3px solid $font-global-color;
+            border-radius: 100%;
+            left: 22px;
+            margin: auto 0;
+        }
+        &:after {
+            content: "";
+            width: 8px;
+            height: 13px;
+            top: 0;
+            bottom: 0;
+            position: absolute;
+            background: url("../img/arrow2.png") center no-repeat;
+            right: 15px;
+            margin: auto 0;
+        }
+    }
+    &__link {
+        display: block;
+        padding-left: 60px;
+        background: #efefef;
+        padding-top:12px;
+        padding-bottom: 12px;
+        text-decoration: none;
+        @include text(bold, $line-height, 15px);
+        &:hover {background: #D3D3D3;}
+    }
+}

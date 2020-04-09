@@ -1,0 +1,48 @@
+.pag-1 {
+    display: inline-block;
+    
+    &__item {
+        width: 12px;
+        height: 12px;
+        border: 3px solid white;
+        border-radius: 100%;
+        display: inline-block;
+        margin: 0 8px;
+        &:first-of-type {
+            margin-left: 0;
+        }
+        &:last-of-type {
+            margin-right: 0;
+        }
+        &_active {
+            border-color: #3dc3f2;
+        }
+    }
+}
+
+.pag-2 {
+    display: inline-block;
+    
+    &__item {
+        width: 25px;
+        height: 25px;
+        display: inline-block;
+        margin: 0 2.5px;
+        background: $font-global-color;
+        background-repeat: no-repeat;
+        background-position: center;
+        border-radius: 100%;
+        &:first-of-type {
+            margin-left: 0;
+        }
+        &:last-of-type {
+            margin-right: 0;
+        }
+        &_1 {
+            background-image: url('../img/arrow3.png');  
+        }
+        &_2 {
+            background-image: url('../img/arrow4.png');  
+        }
+    }
+}

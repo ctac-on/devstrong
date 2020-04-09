@@ -1,0 +1,138 @@
+.header {
+    padding-top: 36px;
+    padding-bottom: 38px;
+    
+    &__logo {
+        text-decoration: none;
+        @include text(900, 50px, 50px, #0086c0);
+        letter-spacing: 4px;
+    }
+    &__form {
+        width: 100%;
+        position: relative;
+        display: block;
+        
+        &-search {
+            width: 100%;
+            border: 1px solid rgb(221, 221, 221);
+            border-radius: map-get($global-border-radius, md);
+            height: 42px;
+            @include text(normal, $line-height, $font-size-small);
+            padding: 5px 50px 5px 25px;
+            &:focus {
+                border-color: rgb(150, 150, 150);
+            }
+        }
+        &-button {
+            position: absolute;
+            top: 1px;
+            right: 1px;
+            height: 42px;
+            width: 42px;
+            display: block;
+            background: url("../img/search.png") center no-repeat;
+            border: 0;
+            cursor: pointer;
+        }
+    }
+    &__item {
+        display: block;
+        width: 100%;
+        text-align: center;
+        
+        &-link {
+            text-decoration: none;
+            display: inline-block;
+            position: relative;
+            height: 26px;
+            width: 30px;
+            text-align: center;
+        }
+        &-nmb {
+            position: absolute;
+            top: -11px;
+            right: -10px;
+            @include text(600, $line-height, $font-size-normal, rgb(0, 158, 226));
+        }
+    }
+
+    
+    //header-top
+    &-top {
+        
+        &__li {
+            padding-right: 27px;
+            padding-top: 12px;
+            padding-bottom: 12px;
+            display: inline-block;
+        }
+        &__link {
+            text-decoration: none;
+            @include text(normal, $line-height, $font-size-small, white);
+            &:hover {
+                color: gray;
+            }
+        }
+        &__blockPhone {
+            text-align: right;
+        }
+        &__phone-text {
+            vertical-align: middle;
+            @include text(normal, $line-height, $font-size-small - 1px, white);
+            padding-right: 30px;
+        }
+        &__phone {
+            text-decoration: none;
+            @include text(bold, $line-height, $font-size-big, #009ee2);
+            vertical-align: middle;
+            letter-spacing: 0.8px;
+            &:hover {
+                color: #026893;
+            }
+        }
+    }
+    
+    //header bottom с меню
+    &-bot {
+        height: 60px;
+        
+        &__h-100 {height: 100%}
+        &__menu {
+            display: flex;
+            height: inherit;
+            justify-content: space-between;
+            
+            &-li {
+                display: inline-block;
+                height: inherit;
+            }
+            &-link {
+                height: inherit;
+                display: flex;
+                align-items: center;
+                padding: 0 8px;
+                @include text(bold, $font-size-small, $font-size-small);
+                text-decoration: none;
+                text-transform: uppercase;
+                position: relative;
+                &:hover {color: #009ee2;}
+                &:after {
+                    content: "";
+                    position: absolute;
+                    top: -6px;
+                    left: 0;
+                    right: 0;
+                    display: inline-block;
+                    margin: 0 auto;
+                    width: 12px;
+                    height: 12px;
+                    transform: rotate(45deg);
+                }
+                &:hover:after {
+                    background: white;
+                }
+            }
+        }
+    }
+
+}
